@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.lblText = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInregistrare = new System.Windows.Forms.Button();
             this.btnAutentificare = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,16 +46,6 @@
             this.lblText.TabIndex = 0;
             this.lblText.Text = "Meniuri diverse caracterizate de transparenta si excelenta!";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::olimpiada_jud_2016.Properties.Resources.good_food_2;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(310, 127);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnInregistrare
             // 
             this.btnInregistrare.Location = new System.Drawing.Point(21, 254);
@@ -63,6 +54,7 @@
             this.btnInregistrare.TabIndex = 2;
             this.btnInregistrare.Text = "Inregistrare";
             this.btnInregistrare.UseVisualStyleBackColor = true;
+            this.btnInregistrare.Click += new System.EventHandler(this.btnInregistrare_Click);
             // 
             // btnAutentificare
             // 
@@ -72,6 +64,17 @@
             this.btnAutentificare.TabIndex = 3;
             this.btnAutentificare.Text = "Autentificare";
             this.btnAutentificare.UseVisualStyleBackColor = true;
+            this.btnAutentificare.Click += new System.EventHandler(this.btnAutentificare_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(74, 101);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(310, 127);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Start
             // 
@@ -88,6 +91,7 @@
             this.Name = "Start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Start_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
